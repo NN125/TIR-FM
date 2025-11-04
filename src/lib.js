@@ -5,12 +5,12 @@
  * @param {number} maxProductPrice
  * @returns {string}
  */
-export const generateEmptyProductMessage = (
+export const generateEmptyProductMessage = ({
   filterText,
   inStockOnly,
   maxPrice,
-  maxProductPrice
-) => {
+  maxProductPrice,
+}) => {
   const conditions = [
     filterText && `matching "${filterText}"`,
     inStockOnly && "in stock",
