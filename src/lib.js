@@ -8,13 +8,13 @@
 export const generateEmptyProductMessage = ({
   filterText,
   inStockOnly,
-  maxPrice,
+  maxFilterPrice,
   maxProductPrice,
 }) => {
   const conditions = [
     filterText && `matching "${filterText}"`,
     inStockOnly && "in stock",
-    maxPrice < maxProductPrice && `under $${maxPrice}`,
+    maxFilterPrice < maxProductPrice && `under $${maxFilterPrice}`,
   ].filter(Boolean);
 
   if (!conditions.length) return "No products found";
