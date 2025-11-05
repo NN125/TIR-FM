@@ -20,7 +20,7 @@ export default function FilterableProductTable({ products }) {
 
   return (
     <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-8 border-2 border-green-200">
-      <SearchBar
+      <SearchFilterTab
         filterText={filterText}
         inStockOnly={inStockOnly}
         sortBy={sortBy}
@@ -226,7 +226,7 @@ function ProductTable({
  * @param {(price: number) => void} onMaxFilterPriceChange
  * @param {() => void} onClearFilters
  */
-function SearchBar({
+function SearchFilterTab({
   filterText,
   inStockOnly,
   sortBy,
