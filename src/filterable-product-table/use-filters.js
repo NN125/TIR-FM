@@ -6,24 +6,24 @@ export default function useFilters() {
   const [filterText, setFilterText] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
   const [sortBy, setSortBy] = useState("category");
-  const [maxPrice, setMaxPrice] = useState(MAX_PRODUCT_PRICE);
+  const [maxFilterPrice, setMaxFilterPrice] = useState(MAX_PRODUCT_PRICE);
 
   const clearFilters = () => {
     setFilterText("");
     setInStockOnly(false);
     setSortBy("category");
-    setMaxPrice(MAX_PRODUCT_PRICE);
+    setMaxFilterPrice(MAX_PRODUCT_PRICE);
   };
 
   return {
     filterText,
     inStockOnly,
     sortBy,
-    maxPrice,
+    maxFilterPrice,
     setFilterText,
     setInStockOnly,
     setSortBy,
-    setMaxPrice,
+    setMaxFilterPrice,
     clearFilters,
   };
 }
