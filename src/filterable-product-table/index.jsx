@@ -79,6 +79,7 @@ function ProductCategoryRow({ category }) {
 
   const emoji = categoryEmojis[category] || "📦";
 
+  // {emoji} {category} generates the header for each product category.
   return (
     <tr>
       <th
